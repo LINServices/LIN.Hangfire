@@ -9,8 +9,9 @@
 
   <ItemGroup>
     <PackageReference Include="Hangfire" Version="1.8.14" />
+    <PackageReference Include="Http.Utils" Version="1.2.0" />
+    <PackageReference Include="LIN.Access.Auth" Version="1.2.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
-    <PackageReference Include="Swashbuckle.AspNetCore" Version="6.6.2" />
   </ItemGroup>
 
   <ItemGroup>
