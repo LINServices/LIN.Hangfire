@@ -38,7 +38,7 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             {
                 httpContext.Response.StatusCode = 401;
                 httpContext.Response.ContentType = "text/html";
-                await httpContext.Response.WriteAsync("Credenciales erróneas");
+                await httpContext.Response.WriteAsync(FileCache.ReadContent("wwwroot/error.html").Replace("@MESSAGE", "Credenciales incorrectas"));
                 return false;
             }
 

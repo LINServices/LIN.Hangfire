@@ -9,7 +9,7 @@
 
   <ItemGroup>
     <PackageReference Include="Hangfire" Version="1.8.14" />
-    <PackageReference Include="Http.Utils" Version="1.2.0" />
+    <PackageReference Include="Http.Utils" Version="2.0.0" />
     <PackageReference Include="LIN.Access.Auth" Version="1.2.0" />
     <PackageReference Include="Microsoft.Data.SqlClient" Version="5.2.2" />
   </ItemGroup>

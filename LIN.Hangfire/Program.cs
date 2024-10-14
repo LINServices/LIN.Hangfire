@@ -7,7 +7,7 @@ var builder = WebApplication.CreateBuilder(args);
 
 // Agregar servicios a la colección.
 builder.Services.AddAuthenticationService();
-builder.Services.AddLINHttp();
+builder.Services.AddLINHttp(useSwagger: false);
 builder.Services.AddSettingsHangfire(builder.Configuration);
 
 // App.
@@ -15,7 +15,6 @@ var app = builder.Build();
 
 // Usar servicios.
 app.UseLINHttp();
-app.UseStaticFiles();
 app.UseSettingsHangfire();
 app.UseAuthorization();
 

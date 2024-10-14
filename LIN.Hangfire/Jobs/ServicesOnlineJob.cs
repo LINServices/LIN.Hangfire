@@ -14,7 +14,6 @@ public class ServicesOnlineJob
     /// </summary>
     public async Task Run()
     {
-        Log();
         ConfigureServices();
         foreach (var url in ServicesUrl!)
         {
@@ -34,20 +33,6 @@ public class ServicesOnlineJob
     private void ConfigureServices()
     {
         ServicesUrl ??= [.. File.ReadAllLines("wwwroot/rutas.txt")];
-    }
-
-    private void Log()
-    {
-        try
-        {
-            if (!File.Exists("wwwroot/log.txt"))
-                File.Create("wwwroot/log.txt");
-
-            File.AppendAllText("wwwroot/log.txt", $"{DateTime.Now} - ServicesOnlineJob - ConfigureServices\n");
-
-        }
-        catch { }
-
     }
 
 }
