@@ -90,7 +90,6 @@ public class JwtService
                 var claimsPrincipal = tokenHandler.ValidateToken(token, validationParameters, out var validatedToken);
                 var jwtToken = (JwtSecurityToken)validatedToken;
 
-
                 // Si el token es válido, puedes acceder a los claims (datos) del usuario
                 var user = jwtToken.Claims.FirstOrDefault(claim => claim.Type == ClaimTypes.NameIdentifier)?.Value;
 
@@ -108,6 +107,5 @@ public class JwtService
         return false;
 
     }
-
 
 }

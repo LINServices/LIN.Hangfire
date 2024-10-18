@@ -30,8 +30,10 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             var username = httpContext.Request.Form["username"].ToString() ?? "";
             var password = httpContext.Request.Form["password"].ToString() ?? "";
 
+            string policy = Http.Services.Configuration.GetConfiguration("policy:current");
+
             // Validar en LIN Auth.
-            var result = await LIN.Access.Auth.Controllers.Authentication.Login(username, password);
+            var result = await Access.Auth.Controllers.Authentication.OnPolicy(username, password, policy ?? string.Empty);
 
             // Respuesta.
             if (result.Response != Types.Responses.Responses.Success)
@@ -49,7 +51,7 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             httpContext.Response.Cookies.Append("HangfireAuthToken", jwtToken, new CookieOptions
             {
                 HttpOnly = true,
-                Secure = true, // Asegurarse de usar HTTPS en producción
+                Secure = true, // Asegurarse de usar HTTPS en producción.
                 Expires = DateTime.UtcNow.AddMinutes(30) // Token válido por 30 minutos.
             });
 
@@ -57,7 +59,7 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
 
         }
 
-        // Si no hay token y no es un intento de autenticación, mostrar el formulario
+        // Si no hay token y no es un intento de autenticación, mostrar el formulario.
         httpContext.Response.StatusCode = 401;
         httpContext.Response.ContentType = "text/html";
         await httpContext.Response.WriteAsync(FileCache.ReadContent("wwwroot/login.html"));
