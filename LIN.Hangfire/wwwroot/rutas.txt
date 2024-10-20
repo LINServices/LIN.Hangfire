@@ -5,3 +5,4 @@ https://api.contacts.linplatform.com/health
 https://manager.nuget.linplatform.com/health
 https://api.cloud.services.linplatform.com/health
 https://api.emma.linplatform.com/health
+https://dev.identity.linplatform.com/health

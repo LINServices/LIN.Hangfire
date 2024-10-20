@@ -3,10 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Hangfire</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
     <style>
         @import url(https://fonts.googleapis.com/css?family=Roboto:400);
 
+        /* Aplica estilos generales para centrar el formulario */
+        body, html {
+            height: 100%;
+            width: 100%;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #f2f2f2; /* Color de fondo opcional */
+        }
+
         .login-page {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
             width: 360px;
             padding: 8% 0 0;
             margin: auto;
@@ -77,6 +93,7 @@
             -webkit-font-smoothing: antialiased;
             -moz-osx-font-smoothing: grayscale;
         }
+
         a[href*="http://somee.com"] {
             visibility: hidden !important;
             display: none !important;

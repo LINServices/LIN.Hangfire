@@ -22,7 +22,7 @@ public static class Hangfire
                 SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
                 QueuePollInterval = TimeSpan.Zero,
                 UseRecommendedIsolationLevel = true,
-                DisableGlobalLocks = true,
+                DisableGlobalLocks = true
             });
             config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
             config.UseSimpleAssemblyNameTypeSerializer();
@@ -45,7 +45,7 @@ public static class Hangfire
     public static IApplicationBuilder UseSettingsHangfire(this IApplicationBuilder app)
     {
         // Configuración del tablero.
-        app.UseHangfireDashboard("/hangfire", new DashboardOptions
+        app.UseHangfireDashboard(string.Empty, new DashboardOptions
         {
             AsyncAuthorization = [new Authorization.IdentityAuthorization()],
             DarkModeEnabled = true,

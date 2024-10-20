@@ -24,7 +24,7 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             return c;
         }
 
-        // Si no hay token, mostrar formulario de autenticación
+        // Si no hay token, mostrar formulario de autenticación.
         if (httpContext.Request.Method == "POST" && httpContext.Request.Form.ContainsKey("username") && httpContext.Request.Form.ContainsKey("password"))
         {
             var username = httpContext.Request.Form["username"].ToString() ?? "";
