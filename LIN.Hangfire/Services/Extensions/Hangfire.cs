@@ -29,11 +29,15 @@ public static class Hangfire
             config.UseRecommendedSerializerSettings();
         });
 
-        services.AddHangfireServer();
+        services.AddHangfireServer(options =>
+        {
+            options.Queues = ["default", "mailing"];
+        });
 
         // Jobs.
         services.AddSingleton<Jobs.ServicesOnlineJob, Jobs.ServicesOnlineJob>();
         services.AddSingleton<Jobs.DatabaseOnlineJob, Jobs.DatabaseOnlineJob>();
+        services.AddSingleton<Jobs.MailSenderJob, Jobs.MailSenderJob>();
         return services;
     }
 
