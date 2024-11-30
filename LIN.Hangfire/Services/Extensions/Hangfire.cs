@@ -60,7 +60,7 @@ public static class Hangfire
         // Agregar job recurrente.
         RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(), $"*/{2} * * * *");
         RecurringJob.AddOrUpdate<Jobs.DatabaseOnlineJob>("DataServicesJob", (v) => v.Run(), $"*/{10} * * * *");
-        RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("DataServicesJob", (v) => v.Run(), $"*/{20} * * * *");
+        RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("ClientActiveJob", (v) => v.Run(), $"*/{20} * * * *");
 
         return app;
     }

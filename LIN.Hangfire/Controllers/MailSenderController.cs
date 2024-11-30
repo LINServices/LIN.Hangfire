@@ -4,7 +4,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace LIN.Hangfire.Controllers;
 
 [Route("api/[controller]")]
-public class MailSenderController : Microsoft.AspNetCore.Mvc.ControllerBase
+public class MailSenderController : ControllerBase
 {
 
     [HttpPost]

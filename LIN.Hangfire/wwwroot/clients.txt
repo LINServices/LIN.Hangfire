@@ -2,6 +2,6 @@
 https://allo.linplatform.com/
 https://notes.linplatform.com/
 https://contacts.linplatform.com/
-https://mail.linplatform.com/
+https://mail.app.linplatform.com/
 https://inventory.linplatform.com/
 https://account.linplatform.com/
