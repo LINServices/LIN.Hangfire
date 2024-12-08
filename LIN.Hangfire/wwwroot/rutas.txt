@@ -8,3 +8,4 @@ https://api.emma.linplatform.com/health
 https://dev.identity.linplatform.com/health
 https://mail.api.identity.linplatform.com/health
 https://api.inventory.linplatform.com/health
+https://cloud.api.linplatform.com/health
