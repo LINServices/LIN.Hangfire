@@ -36,6 +36,7 @@ public static class Hangfire
 
         // Jobs.
         services.AddSingleton<Jobs.ServicesOnlineJob, Jobs.ServicesOnlineJob>();
+        services.AddSingleton<Jobs.SslOnlineJob, Jobs.SslOnlineJob>();
         services.AddSingleton<Jobs.ClientActiveJob, Jobs.ClientActiveJob>();
         services.AddSingleton<Jobs.DatabaseOnlineJob, Jobs.DatabaseOnlineJob>();
         services.AddSingleton<Jobs.MailSenderJob, Jobs.MailSenderJob>();

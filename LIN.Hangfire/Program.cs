@@ -1,4 +1,3 @@
-using Global.Http;
 using Http.Extensions;
 using LIN.Access.Auth;
 using LIN.Hangfire.Services;
@@ -13,7 +12,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddAuthenticationService();
 builder.Services.AddLINHttp(useSwagger: false);
 builder.Services.AddSettingsHangfire(builder.Configuration);
-builder.Services.AddSingleton<EmailService,EmailService>();
+builder.Services.AddSingleton<EmailService, EmailService>();
 
 // App.
 var app = builder.Build();
@@ -21,12 +20,8 @@ var app = builder.Build();
 app.UseRouting();
 // Usar servicios.
 app.UseLINHttp();
-app.UseEndpoints(endpoints =>
-{
-    endpoints.MapControllers();  // Enables attribute routing for controllers
-                                 // Add other endpoint mappings as needed
-});
 
+app.MapControllers();
 app.UseSettingsHangfire();
 
 app.UseHttpsRedirection();
