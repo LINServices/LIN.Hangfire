@@ -1,8 +1,9 @@
 ﻿using Hangfire;
+using System.Text;
 
 namespace LIN.Hangfire.Jobs;
 
-public class ServicesOnlineJob
+public class SslOnlineJob
 {
 
     /// <summary>
@@ -17,6 +18,9 @@ public class ServicesOnlineJob
     public async Task Run()
     {
         ConfigureServices();
+
+        StringBuilder message = new StringBuilder();
+
         foreach (var url in ServicesUrl!)
         {
             try
@@ -24,9 +28,20 @@ public class ServicesOnlineJob
                 var client = new HttpClient();
                 var response = await client.GetAsync(url);
             }
-            catch (Exception)
+            catch (Exception ex)
             {
+                if (ex.Message.Contains("SSL"))
+                {
+                    message.AppendLine($"Se venció el SSL de {url}");
+                }
             }
+        }
+
+        string final = message.ToString();
+
+        if (!string.IsNullOrWhiteSpace(final))
+        {
+            BackgroundJob.Enqueue<MailSenderJob>("mailing", t => t.Run("giraldojhong4@gmail.com", "SSL Vencido", final));
         }
     }
 

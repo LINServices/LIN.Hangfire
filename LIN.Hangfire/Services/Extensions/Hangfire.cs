@@ -58,6 +58,7 @@ public static class Hangfire
         });
 
         // Agregar job recurrente.
+        RecurringJob.AddOrUpdate<Jobs.SslOnlineJob>("sslJob", (v) => v.Run(), "0 */7 * * *"); // Cada 7 horas
         RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(), $"*/{2} * * * *");
         RecurringJob.AddOrUpdate<Jobs.DatabaseOnlineJob>("DataServicesJob", (v) => v.Run(), $"*/{10} * * * *");
         RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("ClientActiveJob", (v) => v.Run(), $"*/{20} * * * *");
