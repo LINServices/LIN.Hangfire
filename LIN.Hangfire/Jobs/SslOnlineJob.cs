@@ -51,7 +51,7 @@ public class SslOnlineJob
     /// </summary>
     private void ConfigureServices()
     {
-        ServicesUrl ??= [.. File.ReadAllLines("wwwroot/rutas.txt")];
+        ServicesUrl ??= [.. File.ReadAllLines("wwwroot/rutas.txt"), ..File.ReadAllLines("wwwroot/clients.txt")];
     }
 
 }
