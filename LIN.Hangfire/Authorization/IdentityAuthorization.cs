@@ -59,7 +59,6 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             });
 
             return true;
-
         }
 
         // Si no hay token y no es un intento de autenticación, mostrar el formulario.
