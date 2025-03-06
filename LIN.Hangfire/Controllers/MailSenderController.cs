@@ -3,6 +3,7 @@ using Microsoft.AspNetCore.Mvc;
 
 namespace LIN.Hangfire.Controllers;
 
+[ApiController]
 [Route("api/[controller]")]
 public class MailSenderController : ControllerBase
 {

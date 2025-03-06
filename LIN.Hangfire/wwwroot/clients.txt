@@ -6,3 +6,4 @@ https://mail.app.linplatform.com/
 https://inventory.linplatform.com/
 https://account.linplatform.com/
 https://console.linplatform.com/
+https://calendar.linplatform.com/
