@@ -1,0 +1,21 @@
+﻿inventory.linplatform.com - Inventory Web
+api.inventory.linplatform.com - Inventory - Service
+cloud.mercadopago.linplatform.com - Mercado Pago Service
+payments.linplatform.com - Mercado Pago Gateway
+linplatform.com - Pagina web principal
+api.identity.linplatform.com - Servicio de identidad
+allo.linplatform.com - Allo Web
+api.communication.linplatform.com - Servicio de Allo
+api.cloud.services.linplatform.com - Servicio de desarrolladores
+logger.linplatform.com - Servicio loggers
+notes.linplatform.com - Notas Web
+api.notes.linplatform.com - Servicio notas
+calendar.linplatform.com - Calendario Web
+api.calendar.linplatform.com - Servicio calendario
+contacts.linplatform.com - Contacts Web
+api.contacts.linplatform.com - Servicio de contactos
+api.emma.linplatform.com - OpenAssistant
+mail.app.linplatform.com - Mail Web
+mail.api.linplatform.comswagger - Mail Service
+humandirectory.linplatform.com - Human Directory
+manager.nuget.linplatform.com - Nuget manager

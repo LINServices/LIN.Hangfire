@@ -1,0 +1,69 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Informe de Incidencias</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+        }
+        .container {
+            max-width: 600px;
+            background: #ffffff;
+            margin: 20px auto;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .header {
+            background: #ef4444;
+            color: #ffffff;
+            padding: 10px;
+            text-align: center;
+            font-size: 18px;
+            border-radius: 8px 8px 0 0;
+        }
+        .content {
+            padding: 15px;
+            color: #333333;
+        }
+        .footer {
+            text-align: center;
+            font-size: 12px;
+            color: #777777;
+            padding: 10px;
+        }
+        .btn {
+            display: inline-block;
+            background: #007bff;
+            color: #ffffff;
+            padding: 10px 15px;
+            text-decoration: none;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="header">Informe de incidencias DNS</div>
+        <div class="content">
+            <p><strong>Fecha:</strong> ##DATE##</p>
+            <p><strong>Descripción:</strong></p>
+            <p>##DESCRIPTION##</p>
+            <p><strong>Total:</strong> ##TOTAL##</p>
+            <p><strong>Servicios Afectados:</strong></p>
+            <ul>
+               ##SERVICES##
+            </ul>
+            <p><strong>Prioridad:</strong> Alta</p>
+        </div>
+        <div class="footer">
+            <p>Este es un mensaje automático, por favor no responda a este correo.</p>
+        </div>
+    </div>
+</body>
+</html>

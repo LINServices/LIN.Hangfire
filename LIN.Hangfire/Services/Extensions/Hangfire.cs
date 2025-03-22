@@ -40,6 +40,7 @@ public static class Hangfire
         services.AddSingleton<Jobs.ClientActiveJob, Jobs.ClientActiveJob>();
         services.AddSingleton<Jobs.DatabaseOnlineJob, Jobs.DatabaseOnlineJob>();
         services.AddSingleton<Jobs.MailSenderJob, Jobs.MailSenderJob>();
+        services.AddSingleton<Jobs.DnsJob, Jobs.DnsJob>();
         return services;
     }
 
@@ -63,6 +64,7 @@ public static class Hangfire
         RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(), $"*/{2} * * * *");
         RecurringJob.AddOrUpdate<Jobs.DatabaseOnlineJob>("DataServicesJob", (v) => v.Run(), $"*/{10} * * * *");
         RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("ClientActiveJob", (v) => v.Run(), $"*/{20} * * * *");
+        RecurringJob.AddOrUpdate<Jobs.DnsJob>("DnsJob", (v) => v.Run(), $"*/{20} * * * *");
 
         return app;
     }

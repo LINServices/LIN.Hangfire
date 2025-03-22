@@ -16,12 +16,13 @@ builder.Services.AddSingleton<EmailService, EmailService>();
 // App.
 var app = builder.Build();
 
-app.UseRouting();
-app.UseSettingsHangfire();
+app.UseRouting();  // Ensure routing is enabled
 
-// Usar servicios.
-app.UseLINHttp();
-app.UseRouting();
-app.MapControllers();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapControllers(); // Ensure this is present
+});
+
+app.UseSettingsHangfire();
 
 app.Run();
