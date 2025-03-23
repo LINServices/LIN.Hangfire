@@ -11,7 +11,6 @@ public class MailSenderJob(EmailService emailService)
     public async Task Run(string mail, string subject, string content)
     {
         await emailService.SendMail([mail], "security", subject, content);
-
     }
 
 }

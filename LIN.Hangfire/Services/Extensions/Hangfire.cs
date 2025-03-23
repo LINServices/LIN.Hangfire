@@ -22,7 +22,8 @@ public static class Hangfire
                 SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
                 QueuePollInterval = TimeSpan.Zero,
                 UseRecommendedIsolationLevel = true,
-                DisableGlobalLocks = true
+                DisableGlobalLocks = true,
+                JobExpirationCheckInterval = TimeSpan.FromHours(3)
             });
             config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
             config.UseSimpleAssemblyNameTypeSerializer();

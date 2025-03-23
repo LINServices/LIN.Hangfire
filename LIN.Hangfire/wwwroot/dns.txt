@@ -16,6 +16,6 @@ contacts.linplatform.com - Contacts Web
 api.contacts.linplatform.com - Servicio de contactos
 api.emma.linplatform.com - OpenAssistant
 mail.app.linplatform.com - Mail Web
-mail.api.linplatform.comswagger - Mail Service
+mail.api.linplatform.com - Mail Service
 humandirectory.linplatform.com - Human Directory
 manager.nuget.linplatform.com - Nuget manager

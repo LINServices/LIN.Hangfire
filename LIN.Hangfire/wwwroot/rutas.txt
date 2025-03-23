@@ -2,7 +2,7 @@
 https://api.communication.linplatform.com/health
 https://api.notes.linplatform.com/health
 https://api.contacts.linplatform.com/health
-https://manager.nuget.linplatform.com/health
+https://manager.nuget.linplatform.com/
 https://api.cloud.services.linplatform.com/health
 https://api.emma.linplatform.com/health
 https://dev.identity.linplatform.com/health
@@ -11,5 +11,5 @@ https://api.inventory.linplatform.com/health
 https://cloud.api.linplatform.com/health
 https://api.search.linplatform.com/health
 https://api.calendar.linplatform.com/health
-https://payments.linplatform.com/
+https://payments.linplatform.com/Mercadopago/health
 https://www.cloud.mercadopago.linplatform.com
