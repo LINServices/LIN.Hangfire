@@ -61,11 +61,12 @@ public static class Hangfire
         });
 
         // Agregar job recurrente.
-        RecurringJob.AddOrUpdate<Jobs.SslOnlineJob>("sslJob", (v) => v.Run(), "0 */7 * * *"); // Cada 7 horas
-        RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(), $"*/{2} * * * *");
-        RecurringJob.AddOrUpdate<Jobs.DatabaseOnlineJob>("DataServicesJob", (v) => v.Run(), $"*/{10} * * * *");
-        RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("ClientActiveJob", (v) => v.Run(), $"*/{20} * * * *");
-        RecurringJob.AddOrUpdate<Jobs.DnsJob>("DnsJob", (v) => v.Run(), $"*/{20} * * * *");
+        RecurringJob.AddOrUpdate<Jobs.SslOnlineJob>("sslJob", (v) => v.Run(), "0 */12 * * *"); // Cada 12 horas
+        RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(false), $"*/{2} * * * *"); // 2 minutos
+        RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJobMail", (v) => v.Run(true), $"*/{30} * * * *"); // 30 minutos
+        RecurringJob.AddOrUpdate<Jobs.DatabaseOnlineJob>("DataServicesJob", (v) => v.Run(), $"*/{10} * * * *"); // 10 minutos
+        RecurringJob.AddOrUpdate<Jobs.ClientActiveJob>("ClientActiveJob", (v) => v.Run(), $"*/{20} * * * *"); // 20 minutos
+        RecurringJob.AddOrUpdate<Jobs.DnsJob>("DnsJob", (v) => v.Run(), $"*/{20} * * * *"); // 20 minutos
 
         return app;
     }

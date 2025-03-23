@@ -16,7 +16,7 @@ public class ServicesOnlineJob
     /// <summary>
     /// Ejecutar el job.
     /// </summary>
-    public async Task Run()
+    public async Task Run(bool sendMessage)
     {
 
         List<string> failures = [];
@@ -26,20 +26,23 @@ public class ServicesOnlineJob
             try
             {
                 var client = new HttpClient();
+
                 var response = await client.GetAsync(url);
 
-                if (!response.IsSuccessStatusCode)
+                if (!response.IsSuccessStatusCode && sendMessage)
                 {
                     failures.Add($"{url} - {response.StatusCode}");
                 }
+
             }
             catch (Exception)
             {
+                failures.Add($"{url} - Exception");
             }
         }
 
         // Enviar el mensaje de correo.
-        if (failures.Count != 0)
+        if (failures.Count != 0 && sendMessage)
         {
             var template = FileCache.ReadContent("wwwroot/mail/services.html");
 
