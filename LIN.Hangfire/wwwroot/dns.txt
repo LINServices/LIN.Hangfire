@@ -20,4 +20,5 @@ mail.api.linplatform.com - Mail Service
 humandirectory.linplatform.com - Human Directory
 manager.nuget.linplatform.com - Nuget manager
 api.search.linplatform.com - API Search
+ada.api.linplatform.com - ADA Manager
 console.linplatform.com - Developer Console

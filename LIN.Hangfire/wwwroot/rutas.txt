@@ -11,5 +11,6 @@ https://api.inventory.linplatform.com/health
 https://cloud.api.linplatform.com/health
 https://api.search.linplatform.com/health
 https://api.calendar.linplatform.com/health
+https://ada.api.linplatform.com/health
 https://payments.linplatform.com/Mercadopago/
 https://cloud.mercadopago.linplatform.com/health
