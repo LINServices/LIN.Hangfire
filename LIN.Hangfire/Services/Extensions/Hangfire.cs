@@ -1,4 +1,5 @@
 ﻿using Hangfire;
+using Hangfire.MySql;
 
 namespace LIN.Hangfire.Services.Extensions;
 
@@ -16,15 +17,13 @@ public static class Hangfire
         // Add Hangfire services.
         services.AddHangfire(config =>
         {
-            config.UseSqlServerStorage(manager.GetConnectionString("hangfire"), new()
-            {
-                CommandBatchMaxTimeout = TimeSpan.FromMinutes(5),
-                SlidingInvisibilityTimeout = TimeSpan.FromMinutes(5),
-                QueuePollInterval = TimeSpan.Zero,
-                UseRecommendedIsolationLevel = true,
-                DisableGlobalLocks = true,
-                JobExpirationCheckInterval = TimeSpan.FromHours(3)
-            });
+            config.UseStorage(
+               new MySqlStorage(manager.GetConnectionString("hangfire"), new MySqlStorageOptions
+               {
+                   TablesPrefix = "Hangfire",
+                   QueuePollInterval = TimeSpan.FromSeconds(15),
+               }));
+
             config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
             config.UseSimpleAssemblyNameTypeSerializer();
             config.UseRecommendedSerializerSettings();
