@@ -1,5 +1,5 @@
 ﻿using Hangfire;
-using Hangfire.MySql;
+using Hangfire.PostgreSql;
 
 namespace LIN.Hangfire.Services.Extensions;
 
@@ -17,13 +17,10 @@ public static class Hangfire
         // Add Hangfire services.
         services.AddHangfire(config =>
         {
-            config.UseStorage(
-               new MySqlStorage(manager.GetConnectionString("hangfire"), new MySqlStorageOptions
-               {
-                   TablesPrefix = "Hangfire",
-                   QueuePollInterval = TimeSpan.FromSeconds(15),
-               }));
-
+            config.UsePostgreSqlStorage((options) =>
+            {
+                options.UseNpgsqlConnection(manager.GetConnectionString("hangfire"));
+            });
             config.SetDataCompatibilityLevel(CompatibilityLevel.Version_170);
             config.UseSimpleAssemblyNameTypeSerializer();
             config.UseRecommendedSerializerSettings();

@@ -56,7 +56,7 @@ public class DnsJob
             template = template.Replace("##SERVICES##", sb.ToString());
 
             // Enviar correo.
-            //BackgroundJob.Enqueue<MailSenderJob>("mailing", t => t.Run("giraldojhong4@gmail.com", "DNS Importante", template));
+            BackgroundJob.Enqueue<MailSenderJob>("mailing", t => t.Run("giraldojhong4@gmail.com", "DNS Importante", template));
         }
     }
 

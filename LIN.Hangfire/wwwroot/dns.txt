@@ -5,8 +5,8 @@ payments.linplatform.com - Mercado Pago Gateway
 linplatform.com - Pagina web principal
 api.identity.linplatform.com - Servicio de identidad
 allo.linplatform.com - Allo Web
-api.communication.linplatform.com - Servicio de Allo
-api.cloud.services.linplatform.com - Servicio de desarrolladores
+communication.api.linplatform.com - Servicio de Allo
+orchestrator.api.linplatform.com - Servicio de orquestación de LIN Cloud
 logger.linplatform.com - Servicio loggers
 notes.linplatform.com - Notas Web
 api.notes.linplatform.com - Servicio notas
@@ -18,7 +18,8 @@ api.emma.linplatform.com - OpenAssistant
 mail.app.linplatform.com - Mail Web
 mail.api.linplatform.com - Mail Service
 humandirectory.linplatform.com - Human Directory
-manager.nuget.linplatform.com - Nuget manager
+nuget.api.linplatform.com - Nuget manager
 api.search.linplatform.com - API Search
-ada.api.linplatform.com - ADA Manager
+edge.api.linplatform.com - ADA Manager
 console.linplatform.com - Developer Console
+buckets.api.linplatform.com - Buckets Service
