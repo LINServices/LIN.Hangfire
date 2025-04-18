@@ -9,7 +9,7 @@ communication.api.linplatform.com - Servicio de Allo
 orchestrator.api.linplatform.com - Servicio de orquestación de LIN Cloud
 logger.linplatform.com - Servicio loggers
 notes.linplatform.com - Notas Web
-api.notes.linplatform.com - Servicio notas
+notes.api.linplatform.com - Servicio notas
 calendar.linplatform.com - Calendario Web
 api.calendar.linplatform.com - Servicio calendario
 contacts.linplatform.com - Contacts Web

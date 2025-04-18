@@ -1,4 +1,4 @@
 ﻿https://api.identity.linplatform.com/Health/databaseUse
 https://api.inventory.linplatform.com/Health/databaseUse
-https://api.notes.linplatform.com/Health/databaseUse
+https://notes.api.linplatform.com/Health/databaseUse
 https://communication.api.linplatform.com/Health/databaseUse
