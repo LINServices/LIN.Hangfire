@@ -23,3 +23,5 @@ api.search.linplatform.com - API Search
 edge.api.linplatform.com - ADA Manager
 console.linplatform.com - Developer Console
 buckets.api.linplatform.com - Buckets Service
+functions.api.linplatform.com - Functions Service
+configuration.api.linplatform.com - Configurations Providers
