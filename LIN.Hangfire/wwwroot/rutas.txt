@@ -5,7 +5,6 @@ https://api.contacts.linplatform.com/health
 https://nuget.api.linplatform.com/
 https://orchestrator.api.linplatform.com/health
 https://api.emma.linplatform.com/health
-https://dev.identity.linplatform.com/health
 https://mail.api.linplatform.com/api/health
 https://api.inventory.linplatform.com/health
 https://buckets.api.linplatform.com/health
@@ -13,6 +12,6 @@ https://api.search.linplatform.com/health
 https://api.calendar.linplatform.com/health
 https://edge.api.linplatform.com/health
 https://payments.linplatform.com/Mercadopago/health
-https://cloud.mercadopago.linplatform.com/health
+https://linmercadopago.somee.com/health
 https://functions.api.linplatform.com/health
 https://configuration.api.linplatform.com/health

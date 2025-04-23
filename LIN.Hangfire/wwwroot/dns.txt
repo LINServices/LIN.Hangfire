@@ -1,6 +1,6 @@
 ﻿inventory.linplatform.com - Inventory Web
 api.inventory.linplatform.com - Inventory - Service
-cloud.mercadopago.linplatform.com - Mercado Pago Service
+linmercadopago.somee.com - Mercado Pago Service
 payments.linplatform.com - Mercado Pago Gateway
 linplatform.com - Pagina web principal
 api.identity.linplatform.com - Servicio de identidad
