@@ -1,5 +1,7 @@
 ﻿using Hangfire;
+using Hangfire.MySql;
 using Hangfire.PostgreSql;
+using Hangfire.SqlServer;
 
 namespace LIN.Hangfire.Services.Extensions;
 
@@ -26,6 +28,7 @@ public static class Hangfire
             config.UseRecommendedSerializerSettings();
         });
 
+
         services.AddHangfireServer(options =>
         {
             options.Queues = ["default", "mailing"];
@@ -46,15 +49,27 @@ public static class Hangfire
     /// Usar servicios de Hangfire.
     /// </summary>
     /// <param name="app">App.</param>
-    public static IApplicationBuilder UseSettingsHangfire(this IApplicationBuilder app)
+    public static IApplicationBuilder UseSettingsHangfire(this IApplicationBuilder app, IConfiguration configuration)
     {
+        
+        app.UseHangfireDashboard("/payments", new DashboardOptions
+        {
+            AsyncAuthorization = [new Authorization.IdentityAuthorization(configuration)],
+            DashboardTitle = "Payments Mercado"
+        }, new MySqlStorage(configuration["jobs:payments"], new()
+        {
+            TablesPrefix = "hangfire"
+        }));
+
         // Configuración del tablero.
         app.UseHangfireDashboard(string.Empty, new DashboardOptions
         {
-            AsyncAuthorization = [new Authorization.IdentityAuthorization()],
+            AsyncAuthorization = [new Authorization.IdentityAuthorization(configuration)],
             DarkModeEnabled = true,
             DashboardTitle = "LIN Hangfire"
         });
+
+        
 
         // Agregar job recurrente.
         RecurringJob.AddOrUpdate<Jobs.SslOnlineJob>("sslJob", (v) => v.Run(), "0 */12 * * *"); // Cada 12 horas

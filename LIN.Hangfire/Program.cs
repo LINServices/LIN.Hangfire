@@ -23,6 +23,7 @@ app.UseEndpoints(endpoints =>
     endpoints.MapControllers(); // Ensure this is present
 });
 
-app.UseSettingsHangfire();
+JwtService.Open(builder.Configuration);
+app.UseSettingsHangfire(builder.Configuration);
 
 app.Run();

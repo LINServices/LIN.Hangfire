@@ -15,9 +15,9 @@ public class EmailService
     /// </summary>
     private void Service()
     {
-        _requestUri ??= Http.Services.Configuration.GetConfiguration("mailing:url");
-        _key ??= Http.Services.Configuration.GetConfiguration("mailing:key");
-        _from ??= Http.Services.Configuration.GetConfiguration("mailing:from");
+        //_requestUri ??= Http.Services.Configuration.GetConfiguration("mailing:url");
+        //_key ??= Http.Services.Configuration.GetConfiguration("mailing:key");
+        //_from ??= Http.Services.Configuration.GetConfiguration("mailing:from");
     }
 
 

@@ -2,7 +2,7 @@
 using LIN.Hangfire.Services;
 namespace LIN.Hangfire.Authorization;
 
-public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
+public class IdentityAuthorization(IConfiguration configuration) : IDashboardAsyncAuthorizationFilter
 {
 
     /// <summary>
@@ -33,7 +33,7 @@ public class IdentityAuthorization : IDashboardAsyncAuthorizationFilter
             var username = httpContext.Request.Form["username"].ToString() ?? "";
             var password = httpContext.Request.Form["password"].ToString() ?? "";
 
-            string policy = Http.Services.Configuration.GetConfiguration("policy:current");
+            string policy = configuration["policy:current"];
 
             // Validar en LIN Auth.
             var result = await Access.Auth.Controllers.Authentication.OnPolicy(username, password, policy ?? string.Empty);

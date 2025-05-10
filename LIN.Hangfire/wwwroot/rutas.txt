@@ -4,7 +4,7 @@ https://notes.api.linplatform.com/health
 https://api.contacts.linplatform.com/health
 https://nuget.api.linplatform.com/
 https://orchestrator.api.linplatform.com/health
-https://api.emma.linplatform.com/health
+https://assistant.api.linplatform.com/health
 https://mail.api.linplatform.com/api/health
 https://api.inventory.linplatform.com/health
 https://buckets.api.linplatform.com/health

@@ -14,7 +14,7 @@ calendar.linplatform.com - Calendario Web
 api.calendar.linplatform.com - Servicio calendario
 contacts.linplatform.com - Contacts Web
 api.contacts.linplatform.com - Servicio de contactos
-api.emma.linplatform.com - OpenAssistant
+assistant.api.linplatform.com - OpenAssistant
 mail.app.linplatform.com - Mail Web
 mail.api.linplatform.com - Mail Service
 humandirectory.linplatform.com - Human Directory
