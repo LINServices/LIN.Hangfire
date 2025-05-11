@@ -3,7 +3,7 @@ api.inventory.linplatform.com - Inventory - Service
 linmercadopago.somee.com - Mercado Pago Service
 payments.linplatform.com - Mercado Pago Gateway
 linplatform.com - Pagina web principal
-api.identity.linplatform.com - Servicio de identidad
+identity.api.linplatform.com - Servicio de identidad
 allo.linplatform.com - Allo Web
 communication.api.linplatform.com - Servicio de Allo
 orchestrator.api.linplatform.com - Servicio de orquestación de LIN Cloud
@@ -19,9 +19,10 @@ mail.app.linplatform.com - Mail Web
 mail.api.linplatform.com - Mail Service
 humandirectory.linplatform.com - Human Directory
 nuget.api.linplatform.com - Nuget manager
-api.search.linplatform.com - API Search
-edge.api.linplatform.com - ADA Manager
+search.api.linplatform.com - API Search
+edge.api.linplatform.com - Edge Manager
 console.linplatform.com - Developer Console
 buckets.api.linplatform.com - Buckets Service
 functions.api.linplatform.com - Functions Service
 configuration.api.linplatform.com - Configurations Providers
+maps.api.linplatform.com - Maps Service

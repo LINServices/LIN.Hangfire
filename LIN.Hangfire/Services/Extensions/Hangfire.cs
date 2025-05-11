@@ -69,8 +69,6 @@ public static class Hangfire
             DashboardTitle = "LIN Hangfire"
         });
 
-        
-
         // Agregar job recurrente.
         RecurringJob.AddOrUpdate<Jobs.SslOnlineJob>("sslJob", (v) => v.Run(), "0 */12 * * *"); // Cada 12 horas
         RecurringJob.AddOrUpdate<Jobs.ServicesOnlineJob>("servicesJob", (v) => v.Run(false), $"*/{2} * * * *"); // 2 minutos

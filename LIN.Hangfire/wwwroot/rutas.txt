@@ -1,4 +1,5 @@
-﻿https://api.identity.linplatform.com/health
+﻿https://maps.api.linplatform.com/health
+https://identity.api.linplatform.com/health
 https://communication.api.linplatform.com/health
 https://notes.api.linplatform.com/health
 https://api.contacts.linplatform.com/health
