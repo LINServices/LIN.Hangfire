@@ -51,7 +51,7 @@ public static class Hangfire
     /// <param name="app">App.</param>
     public static IApplicationBuilder UseSettingsHangfire(this IApplicationBuilder app, IConfiguration configuration)
     {
-        
+
         app.UseHangfireDashboard("/payments", new DashboardOptions
         {
             AsyncAuthorization = [new Authorization.IdentityAuthorization(configuration)],

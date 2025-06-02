@@ -2,7 +2,7 @@
 
 namespace LIN.Hangfire.Services;
 
-public class EmailService
+public class EmailService(IConfiguration configuration)
 {
 
     private string? _requestUri = null;
@@ -15,9 +15,9 @@ public class EmailService
     /// </summary>
     private void Service()
     {
-        //_requestUri ??= Http.Services.Configuration.GetConfiguration("mailing:url");
-        //_key ??= Http.Services.Configuration.GetConfiguration("mailing:key");
-        //_from ??= Http.Services.Configuration.GetConfiguration("mailing:from");
+        _requestUri ??=configuration["mailing:url"];
+        _key ??= configuration["mailing:key"];
+        _from ??= configuration["mailing:from"];
     }
 
 
